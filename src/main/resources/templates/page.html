@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Batch</title>
+<style type="text/css">
+th {
+	color: navy;
+	font-weight: bold;
+	background-color: #60dad4;
+}
+
+table {
+	width: 50%;
+}
+
+td {
+	color: blue;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<p th:text="${error}"
+		style="color: red; font-weight: bold; text-align: center;"></p>
+	<div align="center">
+		<table border="1" cellpadding="5" cellspacing="5"
+			style="text-align: center;">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Salary</th>
+				<th>Age</th>
+			</tr>
+			<tr th:each="employee : ${employees}">
+				<td th:text="${employee.id}"></td>
+				<td th:text="${employee.name}"></td>
+				<td th:text="${employee.salary}"></td>
+				<td th:text="${employee.age}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

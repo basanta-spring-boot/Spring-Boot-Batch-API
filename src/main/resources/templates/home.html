@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>SPRING-BATCH</title>
+<link rel="stylesheet" th:href="@{/css/box.css}" />
+</head>
+<body>
+	<div align="center">
+		<p th:text="${message}" style="color: navy; font-weight: bold;"></p>
+	</div>
+	<div align="center">
+		<form action="/loadPage">
+			<table>
+				<tr>
+					<td>Begin Page :</td>
+					<td><input type="text" name="start" placeholder="Start-Index"
+						required="required" style="height: 20px; width: 100px;" /></td>
+				</tr>
+				<tr>
+					<td>End Page :</td>
+					<td><input type="text" name="end" placeholder="End-Index"
+						required="required" style="height: 20px; width: 100px;" /></td>
+				</tr>
+			</table>
+			<center>
+				<input type="submit" value="LOAD-PAGE" />
+			</center>
+		</form>
+	</div>
+</body>
+</html>
